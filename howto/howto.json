@@ -1,0 +1,439 @@
+{
+ "title": "Team Radio: how it works",
+ "intro": "Team Radio is the Windows app side of RaceCamp: a live pit wall and an AI crew you talk to over push-to-talk while you race in iRacing. This page is the one place for the current download, what's new, and how every screen works. It's kept in step with the app: when something changes in a release, it changes here and in the Discord how-to at the same time.",
+ "note": "Screenshots on this page are rendered from the real app using demo data, so the numbers are invented. What you see live will be your own race.",
+ "download": {
+  "url": "https://github.com/DRM1123/team-radio-releases/releases/latest/download/TeamRadio-beta.zip",
+  "version_api": "https://relay-production-365f.up.railway.app/v1/app-version",
+  "releases_api": "https://api.github.com/repos/DRM1123/team-radio-releases/releases?per_page=8",
+  "requirements": [
+   "Windows 10 or 11 (Team Radio is a desktop app; RaceCamp itself works in any browser)",
+   "iRacing installed and running on the same PC",
+   "A microphone (headset mic is fine) for push-to-talk",
+   "A key or wheel button you can spare for push-to-talk"
+  ]
+ },
+ "crew": [
+  {
+   "name": "Simon",
+   "role": "Crew Chief",
+   "ask": "Overall strategy, damage and rules questions, car setup and handling (\"why is my car loose?\"), and your next pit stop plan. If you're not sure who to ask, ask Simon."
+  },
+  {
+   "name": "Phoebe",
+   "role": "Strategist",
+   "ask": "Pit windows (when to pit), fuel (how much you need), and tire strategy (what to bolt on and when)."
+  },
+  {
+   "name": "Tim",
+   "role": "Coach",
+   "ask": "Getting faster. He works best on the Live Coaching screen, where he can see exactly what your car is doing in each corner, and he can pull real faster laps from Garage 61 to compare against yours."
+  },
+  {
+   "name": "Mack",
+   "role": "Spotter",
+   "ask": "Traffic around you, flags, and anything happening nearby on track. Mack talks on his own when it matters; you don't have to ask."
+  }
+ ],
+ "sections": [
+  {
+   "id": "install",
+   "title": "Download and install",
+   "intro": "There's one download link and it always points at the newest version. You never have to hunt for the right file.",
+   "steps": [
+    "Click Download Team Radio at the top of this page. You get a zip file called TeamRadio-beta.zip.",
+    "Right-click the zip and choose Extract All. Extract it into its own folder, for example C:\\Games\\Team Radio. Don't dump the contents straight onto your Desktop or into Downloads: the auto-updater cleans out the folder the app lives in when it installs an update, so it needs its own folder.",
+    "Open the folder you extracted. Inside is a folder called team_radio_app. Open that, and double-click team_radio_app.exe.",
+    "Want a desktop icon? Right-click team_radio_app.exe, choose Send to, then Desktop (create shortcut). Rename the shortcut to Team Radio if you like.",
+    "A loading screen with the logo shows for a few seconds on every launch. That's normal, just wait for it."
+   ],
+   "shots": []
+  },
+  {
+   "id": "first_launch",
+   "title": "First launch: pick your push-to-talk button",
+   "intro": "Push-to-talk (PTT) is how you talk to the crew: hold the button while you speak, let go when you're done, exactly like a real radio. The first time you open Team Radio it asks you to press the button you want to use. Almost any keyboard key or wheel button works.",
+   "steps": [
+    "When the app asks, press the key or wheel button you want as your radio button. That's it, it's saved.",
+    "Don't pick a wheel button iRacing already uses for something (like iRacing's own voice chat button). Both would fire at once and it gets confusing.",
+    "Picked the wrong one, or want to change it later? Click Settings at the top of the app, open the General tab, and click Rebind PTT (callout 1 below). Press your new button and it's updated instantly.",
+    "Your microphone is picked in the same tab (callout 2). System Default is usually right. Click Test Mic if you want to make sure the app hears you."
+   ],
+   "shots": [
+    {
+     "file": "settings_general",
+     "callouts": [
+      {
+       "region": "rebind_ptt",
+       "text": "Rebind PTT: click, then press your new radio button."
+      },
+      {
+       "region": "combos",
+       "text": "Audio output (where the crew's voices play) and your microphone (what push-to-talk listens to). Test Speaker and Test Mic sit under each one."
+      }
+     ],
+     "image": "images/first_launch-settings_general.png"
+    }
+   ]
+  },
+  {
+   "id": "crew",
+   "title": "Meet your crew",
+   "intro": "Team Radio isn't one voice, it's a crew of four with real jobs, like a real team. Hold your PTT button, say what you want out loud, let go. Whoever's the right person answers. You don't have to memorize who does what: ask your question like you're talking to a real person and the right crew member picks it up.",
+   "steps": [
+    "Simon, Phoebe and Tim know the difference between car types. A GT3, a prototype and a touring car get different strategy and different advice.",
+    "Want someone quiet? The four crew buttons on the Race tab (callout 1) turn each person on or off. Off means completely silent, no answers and no unprompted chatter, until you turn them back on.",
+    "The Team Radio panel in the header (callout 2) shows who's talking right now, with a waveform that traces the actual audio."
+   ],
+   "shots": [
+    {
+     "file": "race",
+     "callouts": [
+      {
+       "region": "persona_toggles",
+       "text": "Crew toggles: click a name to mute or unmute that crew member."
+      },
+      {
+       "region": "radio",
+       "text": "Live comms: who's transmitting, and a real waveform of their voice."
+      }
+     ],
+     "image": "images/crew-race.png"
+    }
+   ]
+  },
+  {
+   "id": "race_tab",
+   "title": "The Race tab: your main screen",
+   "intro": "This is the screen you'll look at most while driving. Everything on it is real, live information straight from your iRacing session. Nothing is a guess.",
+   "steps": [
+    "Header (callout 1): the current flag on both sides, the session clock and lap in the ring, and who's driving which car. The dot next to SDK tells you Team Radio is connected to iRacing.",
+    "Race control strip (callout 2): penalty status, whether you're on track or on pit road, and track condition (dry, damp, wet).",
+    "Tire Status (callout 3): live temperature and wear on all four tires.",
+    "Relative (callout 4): just the cars close to you on track, a few ahead and a few behind. More useful than the full list when you're actually racing someone. The dropdown lets you show only your own class.",
+    "Overall Standings (callout 5): every car in the race in running order, updating live. Your car is highlighted. Same class dropdown.",
+    "Pace & Car Status (callout 6): your live delta, pace vs your optimal, lap consistency, required and optional repairs, and brake bias.",
+    "Position strip (callout 7): overall and class position, gap ahead, fuel, your incidents, the team's incidents, and lap state.",
+    "Strategy (callout 8): the pit-window timeline, next stop, fuel burn, fuel to end, projected rejoin position, traffic risk, and your fuel level bar. This is Phoebe's board.",
+    "Performance (callout 9): lap time trend, gear, RPM, theoretical best, and live throttle, brake and clutch bars."
+   ],
+   "shots": [
+    {
+     "file": "race",
+     "callouts": [
+      {
+       "region": "header",
+       "text": "Flags, session clock, driver and car, SDK connection."
+      },
+      {
+       "region": "race_control",
+       "text": "Penalty, pit road or on track, track condition."
+      },
+      {
+       "region": "tire_status",
+       "text": "Tire temps and wear."
+      },
+      {
+       "region": "relative",
+       "text": "Cars near you on track."
+      },
+      {
+       "region": "standings",
+       "text": "Full running order."
+      },
+      {
+       "region": "pace_status",
+       "text": "Delta, repairs, brake bias."
+      },
+      {
+       "region": "metrics_strip",
+       "text": "Position, gap, fuel, incidents."
+      },
+      {
+       "region": "strategy",
+       "text": "Fuel and pit planning."
+      },
+      {
+       "region": "performance",
+       "text": "Lap trend, gear, RPM, pedals."
+      }
+     ],
+     "image": "images/race_tab-race.png"
+    }
+   ]
+  },
+  {
+   "id": "pit_stops",
+   "title": "Pit stops by voice",
+   "intro": "Before you drive into the pits, tell Simon what you want done. Once you say it, it's set up as a real pit command in iRacing, and it shows on the wall so the whole team can see the plan before you arrive in the box.",
+   "steps": [
+    "Hold PTT and say what you need: \"tires only\", \"fill it up\", \"fuel to the end of the race\".",
+    "Tires can be as specific as you need: \"all four\", \"left side\", \"right side\", \"fronts only\", \"rears only\", or a single corner like \"just the right front\". Whatever you say is exactly what gets checked, nothing more.",
+    "The Strategy panel on the Race tab shows the next stop and pit window, so you and Phoebe are always looking at the same numbers."
+   ],
+   "shots": [
+    {
+     "file": "race",
+     "callouts": [
+      {
+       "region": "strategy",
+       "text": "Next stop, pit window, fuel to end, and the fuel bar."
+      }
+     ],
+     "image": "images/pit_stops-race.png"
+    }
+   ]
+  },
+  {
+   "id": "live_coaching",
+   "title": "Live Coaching: getting faster",
+   "intro": "Click Live Coaching any time, even while you're just spectating, to watch your driving as data. This is the best place to ask Tim for coaching, because he's looking at exactly what your car is doing in real time.",
+   "steps": [
+    "The card at the top (callout 1) automatically finds the one corner where you're losing the most time against your own best lap, and shows what's different: entry speed, apex speed, exit speed.",
+    "Click Show Detailed Traces (callout 2) to open five live graphs for the current lap (callout 3): speed, throttle and brake, steering angle, lateral G and longitudinal G, all plotted against distance around the lap.",
+    "Time Comparison (callout 4) shows, corner by corner, where this lap gained or lost time against your best lap this session.",
+    "How Tim coaches: he compares real telemetry corner by corner and names what's actually different instead of giving generic advice. He has three comparisons: you against your own best lap, you against the fastest driver in your class this session, and you against a real faster reference lap (next section)."
+   ],
+   "shots": [
+    {
+     "file": "live_coaching_detailed",
+     "callouts": [
+      {
+       "region": "biggest_loss_card",
+       "text": "Where you're losing the most time right now, and why."
+      },
+      {
+       "region": "advanced_toggle",
+       "text": "Show or hide the detailed trace graphs."
+      },
+      {
+       "region": "traces",
+       "text": "Speed, pedals, steering, lateral G, longitudinal G for the current lap."
+      },
+      {
+       "region": "corner_delta_chart",
+       "text": "Corner-by-corner time gained or lost vs your best lap."
+      }
+     ],
+     "image": "images/live_coaching-live_coaching_detailed.png"
+    }
+   ]
+  },
+  {
+   "id": "reference_laps",
+   "title": "Reference laps: learning from faster drivers (Garage 61)",
+   "intro": "Your own best lap can only teach you so much. To get faster than you are now, you need to see what a quicker driver does differently. Team Radio pulls that from Garage 61, a telemetry-sharing service with millions of recorded laps. Nothing to set up on your end.",
+   "steps": [
+    "Hold PTT and ask Tim things like \"What's a good lap time here?\", \"What does a faster driver do differently?\", or \"How do I get faster around this track?\"",
+    "Tim looks up the exact car and track you're in and comes back with a target time (the fastest recorded lap for this combo and the rating of the driver who set it) and a corner-by-corner comparison of their braking, throttle and steering against yours.",
+    "One honest limit: the full comparison needs a lap that's been shared, meaning your teammates' laps (recorded through Garage 61's own app) or any driver who shares their data. Everyone's lap times are visible; a stranger's pedal data usually isn't. Tim tells you plainly when only the target time is available."
+   ],
+   "shots": []
+  },
+  {
+   "id": "stint_log",
+   "title": "Stint Log and Fair Share: who drove when",
+   "intro": "If more than one person shares a car during a race, the Stint Log tab keeps track of every driver change automatically. You don't write anything down; it just happens.",
+   "steps": [
+    "Fair Share (callout 1): in endurance races everyone is supposed to drive roughly an equal share. This does the math and shows whether each driver, and the team overall, is on track to hit it, based on how much of the race has actually happened so far. One hour into a ten-hour race it won't call you \"behind\" just because you haven't driven yet.",
+    "Stint Log (callout 2): one row per stint with laps, best lap, average lap, incidents and duration. The current stint is highlighted. Under each row are the real events from that stint: pit stops tagged fuel or tires, flag changes, incidents, new best laps. Click a row to open the full event list."
+   ],
+   "shots": [
+    {
+     "file": "stint_log",
+     "callouts": [
+      {
+       "region": "fair_share",
+       "text": "Is drive time being shared evenly, right now?"
+      },
+      {
+       "region": "stint_log",
+       "text": "Every stint this session, current one on top. Click a row for detail."
+      }
+     ],
+     "image": "images/stint_log-stint_log.png"
+    }
+   ]
+  },
+  {
+   "id": "weather",
+   "title": "Weather",
+   "intro": "The Weather tab shows the sky and track conditions straight from iRacing's own data, so what the wall says and what the crew says always agree.",
+   "steps": [
+    "Conditions (callout 1): the plain-English sky state (clear, cloudy, light rain, fog, and so on).",
+    "The tiles (callout 2): air temperature, track temperature, track wetness, humidity, wind direction and wind speed.",
+    "When rain starts or stops, or fog rolls in, the crew tells you on the radio. When it rains you'll hear it faintly under their voices. You can turn that rain sound off in Settings if you'd rather not."
+   ],
+   "shots": [
+    {
+     "file": "weather",
+     "callouts": [
+      {
+       "region": "conditions",
+       "text": "Sky and rain state in words."
+      },
+      {
+       "region": "weather_tiles",
+       "text": "Temperatures, wetness, humidity, wind."
+      }
+     ],
+     "image": "images/weather-weather.png"
+    }
+   ]
+  },
+  {
+   "id": "overlays",
+   "title": "Overlays: floating tiles over the sim",
+   "intro": "Overlays are small always-on-top tiles you can place over iRacing itself, for the people who race on one screen or want a couple of numbers in their eyeline. Each one is a piece of the wall: speed, fuel, fuel calculator, lap, delta, sectors, relative, standings, team radio, strategy, performance, tire status, race info and weather.",
+   "steps": [
+    "The list (callout 1): switch each overlay on or off. Hover a name to see a preview of that tile (callout 2).",
+    "Launch Overlays and Close Overlays (callout 3) show or hide all the ones you've switched on.",
+    "Edit Layout lets you drag each tile where you want it on screen. Positions are remembered.",
+    "Test Overlays pops the overlays up with demo data, so you can arrange them without being in a race."
+   ],
+   "shots": [
+    {
+     "file": "overlays",
+     "callouts": [
+      {
+       "region": "overlay_list",
+       "text": "Turn each overlay on or off."
+      },
+      {
+       "region": "preview",
+       "text": "Hover an overlay to preview it."
+      },
+      {
+       "region": "overlay_buttons",
+       "text": "Launch, close, arrange, and test the overlays."
+      }
+     ],
+     "image": "images/overlays-overlays.png"
+    }
+   ]
+  },
+  {
+   "id": "settings",
+   "title": "Settings: making Team Radio your own",
+   "intro": "Click Settings at the top of the app any time. Three tabs.",
+   "steps": [
+    "General (first screenshot): one radio volume for all four crew members (callout 1), how fast they talk, audio output device and microphone (callout 2), spotter number callouts on or off, rain on the radio on or off, Rebind PTT (callout 3), Mute Startup Radio and Mute All Radio (callout 4), and metric or imperial display units (callout 5). Mute All is for a spectator who doesn't want to hear the radio; it clears itself the moment you get in the car.",
+    "Team Branding (second screenshot): upload your own team logo to replace the default RaceCamp one in the header, or reset to the default (callout 1). Save Branding applies it (callout 2).",
+    "RaceCamp (third screenshot): Sign In With RaceCamp (callout 1) opens racecamp.app in your browser. Once you're in, Team Radio uses your RaceCamp login for everything, and if you're on more than one team you pick the one you're racing with here (callout 2)."
+   ],
+   "shots": [
+    {
+     "file": "settings_general",
+     "callouts": [
+      {
+       "region": "sliders",
+       "text": "Crew volume and speech rate."
+      },
+      {
+       "region": "combos",
+       "text": "Audio output and microphone."
+      },
+      {
+       "region": "rebind_ptt",
+       "text": "Change your push-to-talk button."
+      },
+      {
+       "region": "mute_startup",
+       "text": "Mute the startup radio, or mute everything."
+      },
+      {
+       "region": "units",
+       "text": "Metric or imperial."
+      }
+     ],
+     "image": "images/settings-settings_general.png"
+    },
+    {
+     "file": "settings_team_branding",
+     "callouts": [
+      {
+       "region": "logo_buttons",
+       "text": "Upload your team logo, or reset to the default."
+      },
+      {
+       "region": "save_branding",
+       "text": "Save Branding applies it."
+      }
+     ],
+     "image": "images/settings-settings_team_branding.png"
+    },
+    {
+     "file": "settings_racecamp",
+     "callouts": [
+      {
+       "region": "sign_in",
+       "text": "Sign In With RaceCamp opens racecamp.app in your browser."
+      },
+      {
+       "region": "team_combo",
+       "text": "Pick the team you're racing with."
+      }
+     ],
+     "image": "images/settings-settings_racecamp.png"
+    }
+   ]
+  },
+  {
+   "id": "updates",
+   "title": "Updates",
+   "intro": "Every time you open Team Radio it checks for a newer version. If there is one, a small window tells you and installs it for you. You never have to go looking.",
+   "steps": [
+    "Click Download Update (callout 1). The app downloads the new version, shows progress, then swaps itself out and restarts. Your settings and PTT binding are kept.",
+    "Click Later if you're about to race; it'll ask again next launch.",
+    "What's new in each version is listed at the top of this page under What's New, pulled straight from the release."
+   ],
+   "shots": [
+    {
+     "file": "dialog_update",
+     "callouts": [
+      {
+       "region": "buttons",
+       "text": "Download Update installs it in place. Later asks again next launch."
+      }
+     ],
+     "image": "images/updates-dialog_update.png"
+    }
+   ]
+  },
+  {
+   "id": "bugs",
+   "title": "Reporting a bug or suggesting a feature",
+   "intro": "If something breaks, looks wrong, or doesn't work the way you expect, tell us from inside the app. It's genuinely the fastest way to get something fixed.",
+   "steps": [
+    "Click Report Bug at the top of the app. Type your name, what happened, which screen you were on, how serious it is, and optionally attach a screenshot (callout 1). Send Bug Report (callout 2) posts it straight to the dev team's Discord channel.",
+    "Got an idea instead of a problem? Click Suggest A Feature next to it. Same simple form, same direct line to the dev team.",
+    "Don't put passwords or private race data in a report. Screenshots only go if you attach one."
+   ],
+   "shots": [
+    {
+     "file": "dialog_bug_report",
+     "callouts": [
+      {
+       "region": "fields",
+       "text": "Name, what happened, which screen, severity, optional screenshot."
+      },
+      {
+       "region": "send",
+       "text": "Send Bug Report goes straight to the dev team."
+      }
+     ],
+     "image": "images/bugs-dialog_bug_report.png"
+    }
+   ]
+  },
+  {
+   "id": "track_map",
+   "title": "Track Map",
+   "intro": "The Track Map tab is switched off for now while the map system gets a proper rebuild. It's on the list. When it's back, it'll be documented here and in Discord the same day.",
+   "steps": [],
+   "shots": []
+  }
+ ],
+ "published_at": "2026-09-23T19:02:56+00:00",
+ "app_version": "0.9.20"
+}
