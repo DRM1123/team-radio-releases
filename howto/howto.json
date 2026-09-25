@@ -83,7 +83,7 @@
    "steps": [
     "Simon, Phoebe and Tim know the difference between car types. A GT3, a prototype and a touring car get different strategy and different advice.",
     "Want someone quiet? The four crew buttons on the Race tab (callout 1) turn each person on or off. Off means completely silent, no answers and no unprompted chatter, until you turn them back on.",
-    "The Team Radio panel in the header (callout 2) shows who's talking right now, with a waveform that traces the actual audio."
+    "The live comms trace running across the header on both sides of the session clock (callout 2) is who's talking right now: it traces the actual audio, lime on the left, orange to red on the right, and the pill in the status row under it names the speaker."
    ],
    "shots": [
     {
@@ -95,7 +95,7 @@
       },
       {
        "region": "radio",
-       "text": "Live comms: who's transmitting, and a real waveform of their voice."
+       "text": "Live comms: a real waveform of whoever is transmitting, either side of the clock."
       }
      ],
      "image": "images/crew-race.png"
@@ -107,7 +107,7 @@
    "title": "The Race tab: your main screen",
    "intro": "This is the screen you'll look at most while driving. Everything on it is real, live information straight from your iRacing session. Nothing is a guess.",
    "steps": [
-    "Header (callout 1): the current flag on both sides, the session clock and lap in the ring, and who's driving which car. The dot next to SDK tells you Team Radio is connected to iRacing.",
+    "Header (callout 1): the current flag on both sides, the session clock and lap in the ring, and who's driving which car. The dot next to SDK tells you Team Radio is connected to iRacing. The TEAM SYNC light next to it is red when this race stays on your PC and glowing green when it's being shared with your RaceCamp team (sign in and pick a team under Settings, RaceCamp).",
     "Race control strip (callout 2): penalty status, whether you're on track or on pit road, and track condition (dry, damp, wet).",
     "Tire Status (callout 3): live temperature and wear on all four tires.",
     "Relative (callout 4): just the cars close to you on track, a few ahead and a few behind. More useful than the full list when you're actually racing someone. The dropdown lets you show only your own class.",
@@ -187,32 +187,36 @@
   {
    "id": "live_coaching",
    "title": "Live Coaching: getting faster",
-   "intro": "Click Live Coaching any time, even while you're just spectating, to watch your driving as data. This is the best place to ask Tim for coaching, because he's looking at exactly what your car is doing in real time.",
+   "intro": "Click Live Coaching any time, even while you're just spectating. It compares every corner you drive against your best lap of the session, the moment you finish the corner, and says in plain words what was different. This is also the best place to ask Tim for coaching, because he's looking at the same numbers.",
    "steps": [
-    "The card at the top (callout 1) automatically finds the one corner where you're losing the most time against your own best lap, and shows what's different: entry speed, apex speed, exit speed.",
-    "Click Show Detailed Traces (callout 2) to open five live graphs for the current lap (callout 3): speed, throttle and brake, steering angle, lateral G and longitudinal G, all plotted against distance around the lap.",
-    "Time Comparison (callout 4) shows, corner by corner, where this lap gained or lost time against your best lap this session.",
-    "How Tim coaches: he compares real telemetry corner by corner and names what's actually different instead of giving generic advice. He has three comparisons: you against your own best lap, you against the fastest driver in your class this session, and you against a real faster reference lap (next section)."
+    "The card at the top (callout 1) flips as you complete each corner: the corner's real name, the time you gained or lost, where you braked, turned in and got on the throttle compared with your best lap (in feet or metres), your slowest speed through it, and one sentence telling you what to change. Between laps it shows the corner that cost you the most on the last lap.",
+    "Corner by corner (callout 2) fills in as you go round: green means faster than your best, red means slower, the corner you just did is outlined. Corners you haven't reached yet show three dots.",
+    "The traces (callout 3) draw your best lap faintly under the lap you're on right now, with every corner marked by name, so you can see exactly where the two lines split. Speed and pedals are always on; click Show All Traces (callout 4) to add steering and the G-force traces.",
+    "Corner names come from Lovely Sim Racing's free track data. On a track it doesn't cover yet, corners are simply numbered in lap order.",
+    "The Focus bar under the card picks the one corner that keeps costing you time, lap after lap, and sticks with it for at least five laps: the corner name, the average loss, the phase (braking, entry, exit or carry), how your last lap went there and whether you're improving. Its tile in the strip is lit lime. Work on that one corner; when it's fixed, the focus moves on by itself. Tim's unprompted check-ins are about the focus corner only.",
+    "When you come into the pits (or take the flag), Tim writes a two-line stint debrief: your best lap and how far off the reference it was, the corner that came good, the corner that's still costing you the most and why, and the one thing to do next stint. It takes over the card while you're on pit road, it's saved to your Team Radio debriefs folder, and it goes to the team record. In practice and test sessions Tim reads it out on pit entry; in races and qualifying he stays quiet and you can ask him: \"read me the stint debrief\".",
+    "Live cue: in practice and test sessions Tim gives one short call on the straight before your focus corner, once a lap, a few seconds before the brake point (\"Turn 4, brakes deeper.\"). He skips it if a car is within a second of you, you've just had an incident, you're on the radio, or you've already nailed that corner two laps running. It's off in races and qualifying unless you turn on Also In Races in Settings.",
+    "How Tim coaches: he reads the same per-corner numbers - brake point, turn-in, throttle, slowest speed - and names what's actually different instead of giving generic advice. He has three comparisons: you against your own best lap, you against the fastest driver in your class this session, and you against a real faster reference lap (next section)."
    ],
    "shots": [
     {
      "file": "live_coaching_detailed",
      "callouts": [
       {
-       "region": "biggest_loss_card",
-       "text": "Where you're losing the most time right now, and why."
+       "region": "corner_card",
+       "text": "The corner you just completed: name, time lost or gained, brake point, turn-in, throttle, slowest speed, and what to change."
       },
       {
-       "region": "advanced_toggle",
-       "text": "Show or hide the detailed trace graphs."
+       "region": "corner_strip",
+       "text": "Corner by corner: green faster, red slower, filling in as you go round."
       },
       {
        "region": "traces",
-       "text": "Speed, pedals, steering, lateral G, longitudinal G for the current lap."
+       "text": "Your best lap drawn faintly under the lap you're on, corners marked by name."
       },
       {
-       "region": "corner_delta_chart",
-       "text": "Corner-by-corner time gained or lost vs your best lap."
+       "region": "advanced_toggle",
+       "text": "Show or hide the steering and G-force traces."
       }
      ],
      "image": "images/live_coaching-live_coaching_detailed.png"
@@ -319,7 +323,7 @@
    "steps": [
     "General (first screenshot): one radio volume for all four crew members (callout 1), how fast they talk, audio output device and microphone (callout 2), spotter number callouts on or off, rain on the radio on or off, Rebind PTT (callout 3), Mute Startup Radio and Mute All Radio (callout 4), and metric or imperial display units (callout 5). Mute All is for a spectator who doesn't want to hear the radio; it clears itself the moment you get in the car.",
     "Team Branding (second screenshot): upload your own team logo to replace the default RaceCamp one in the header, or reset to the default (callout 1). Save Branding applies it (callout 2).",
-    "RaceCamp (third screenshot): Sign In With RaceCamp (callout 1) opens racecamp.app in your browser. Once you're in, Team Radio uses your RaceCamp login for everything, and if you're on more than one team you pick the one you're racing with here (callout 2)."
+    "RaceCamp (third screenshot): Sign In With RaceCamp (callout 1) opens racecamp.app in your browser. Once you're in, Team Radio uses your RaceCamp login for everything, and if you're on more than one team you pick the one you're racing with here (callout 2). The TEAM SYNC line under the team picker tells you whether this race is being shared with that team; the same light sits in the wall header on every tab."
    ],
    "shots": [
     {
@@ -434,6 +438,6 @@
    "shots": []
   }
  ],
- "published_at": "2026-09-24T03:19:29+00:00",
+ "published_at": "2026-09-25T01:27:38+00:00",
  "app_version": "0.9.21"
 }
