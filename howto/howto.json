@@ -289,7 +289,7 @@
   {
    "id": "overlays",
    "title": "Overlays: floating tiles over the sim",
-   "intro": "Overlays are small always-on-top tiles you can place over iRacing itself, for the people who race on one screen or want a couple of numbers in their eyeline. Each one is a piece of the wall: speed, fuel, fuel calculator, lap, delta, sectors, relative, standings, mini standings, team radio, strategy, performance, tire status, race info, weather, session timer, flag LED, team branding, radar, G-force, the track map, System (FPS, the sim's CPU and GPU load, GPU temperature, your PC's CPU and RAM), Inputs (steering angle, throttle, brake and clutch, with a scrolling trace of the last eight seconds), and the Align Grid.",
+   "intro": "Overlays are small always-on-top tiles you can place over iRacing itself, for the people who race on one screen or want a couple of numbers in their eyeline. Each one is a piece of the wall: speed, fuel, fuel calculator, lap, delta, sectors, relative, standings, mini standings, team radio, strategy, performance, tire status, race info, weather, session timer, flag LED, team branding, radar, G-force, the track map, System (FPS; Sim CPU frame and Sim GPU frame, which are iRacing's own numbers for how much of each frame's time budget its CPU work and the GPU took, so over 100% means the sim is running slower than its frame target, not a broken PC; GPU temperature; your PC's CPU and RAM), Inputs (steering angle, throttle, brake and clutch, with a scrolling trace of the last eight seconds), and the Align Grid.",
    "steps": [
     "The list (callout 1): switch each overlay on or off. Hover a name to see a preview of that tile (callout 2).",
     "Launch Overlays and Close Overlays (callout 3) show or hide all the ones you've switched on. You can also give each a keyboard shortcut in Settings > Appearance, so they work while iRacing has focus.",
@@ -465,6 +465,6 @@
    "shots": []
   }
  ],
- "published_at": "2026-09-25T22:19:33+00:00",
+ "published_at": "2026-09-25T22:57:59+00:00",
  "app_version": "0.9.23"
 }
