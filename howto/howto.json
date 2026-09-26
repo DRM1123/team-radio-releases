@@ -276,10 +276,13 @@
   {
    "id": "weather",
    "title": "Weather",
-   "intro": "The Weather tab shows the sky and track conditions straight from iRacing's own data, so what the wall says and what the crew says always agree.",
+   "intro": "The Weather tab tells the session's weather as a story, all of it straight from iRacing's own data, so what the wall says and what the crew says always agree.",
    "steps": [
-    "Conditions (callout 1): the plain-English sky state (clear, cloudy, light rain, fog, and so on).",
+    "Sun: the sim's real sun on a horizon arc, east to west, with the sim clock under it. Once the app has watched the sun move for a minute it counts down to sunset, to dark, or to sunrise in your own minutes, even in a session running accelerated time. Simon calls sunset about fifteen minutes out and again when it's dark.",
+    "Session chart: track temperature (orange) and air temperature (green) across the whole session, with the trend per ten minutes in the header, track wetness as a blue band along the bottom, rain as blue bars, and every pit-road entry as a dashed line. It fills in from the moment you join.",
+    "Conditions (callout 1): the plain-English sky state (clear, cloudy, light rain, fog, and so on). Next to it, Track Call: which way the track is going, drying or getting wetter, and roughly how many laps until slicks or wets become the move, worked out from the measured trend and labelled with its confidence. Phoebe says it out loud when the window gets close.",
     "The tiles (callout 2): air temperature, track temperature, track wetness, humidity, wind direction and wind speed.",
+    "Wind on the map: the Track Map tab and the TRACK MAP overlay show a wind arrow. Once you've crossed start/finish at speed the app knows which way the main straight points, and the arrow turns into the real direction across the outline with a call of headwind, tailwind or crosswind on the main straight.",
     "When rain starts or stops, or fog rolls in, the crew tells you on the radio. When it rains you'll hear it faintly under their voices. You can turn that rain sound off in Settings if you'd rather not."
    ],
    "shots": [
@@ -305,12 +308,13 @@
    "intro": "Overlays are small always-on-top tiles you place over iRacing itself, for anyone who races on one screen or wants a few numbers in their eyeline. Each one is a piece of the wall, and you pick exactly which ones you want.",
    "steps": [
     "The list (callout 1): switch each overlay on or off. Hover a name to see a preview of that tile (callout 2).",
-    "What's in the list: the single numbers (speed, fuel, fuel calculator, lap, delta, sectors), the wall panels (relative, standings, mini standings, team radio, strategy, performance, tire status, race info, weather, session timer, flag LED, team branding), the radar and G-force meter, the track map, and the Align Grid.",
+    "What's in the list: the single numbers (speed, fuel, fuel calculator, lap, delta, sectors), the wall panels (relative, standings, mini standings, team radio, strategy, performance, tire status, race info, weather, session timer, flag LED, team branding), the radar and G-force meter, the track map, Twitch Chat (your channel's chat, read-only, no login: just the channel name under Settings > Appearance), and the Align Grid.",
     "System: FPS, Sim CPU frame, Sim GPU frame, GPU temperature, and your PC's CPU and RAM. The two 'frame' tiles are iRacing's own numbers for how much of each frame's time budget its CPU work and the GPU took. They can read over 100%: that means the sim is running slower than its frame target, not a broken PC.",
     "Inputs: steering angle, throttle, brake and clutch, with a scrolling trace of the last eight seconds.",
     "Launch Overlays and Close Overlays (callout 3) show or hide everything you've switched on. Give them keyboard shortcuts under Settings > Appearance and they work while iRacing has focus.",
-    "Edit Layout: drag a tile where you want it, drag its bottom-right corner to resize it. Everything inside scales together, and positions are remembered.",
-    "Align Grid: with it switched on, a grid covers every monitor while Edit Layout is on, and a tile you drop snaps to the nearest line. Turn Edit Layout off and the grid disappears.",
+    "Edit Layout: drag a tile where you want it, drag its bottom-right corner to resize it, and hold Ctrl and scroll on a tile to make its words bigger or smaller without changing the tile. Everything is remembered.",
+    "Align Grid: with it switched on, a grid covers every monitor while Edit Layout is on, and a tile you drop snaps to the nearest line. Snap To Grid next to Edit Layout turns the snapping off and on. Turn Edit Layout off and the grid disappears.",
+    "Standings and Mini Standings have options under their preview: which columns show, a class filter, and Group By Class for multiclass races.",
     "Test Overlays pops everything up with demo data so you can arrange it without being in a race. Tile color and how see-through the tiles are live under Settings > Appearance."
    ],
    "shots": [
@@ -468,6 +472,6 @@
    ]
   }
  ],
- "published_at": "2026-09-26T00:47:15+00:00",
- "app_version": "0.9.24"
+ "published_at": "2026-09-26T02:31:15+00:00",
+ "app_version": "0.9.25"
 }
