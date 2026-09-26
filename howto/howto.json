@@ -81,10 +81,10 @@
    "title": "Meet your crew",
    "intro": "Team Radio isn't one voice, it's a crew of four with real jobs, like a real team. Hold your PTT button, say what you want out loud, let go. Whoever's the right person answers. You don't have to memorize who does what: ask your question like you're talking to a real person and the right crew member picks it up.",
    "steps": [
-    "Simon, Phoebe and Tim know the difference between car types. A GT3, a prototype and a touring car get different strategy and different advice.",
-    "A black flag gets an instant call from Simon: why you got it (pit road speeding and by how much, jumping the start, passing under the yellow, cutting the course, or the pit exit blend line - and he says so if he can't tell), how to serve it, and then a call when it's cleared. iRacing doesn't tell the app whether it's a drive-through or a stop-and-go, so that part stays on your black box.",
     "Want someone quiet? The four crew buttons on the Race tab (callout 1) turn each person on or off. Off means completely silent, no answers and no unprompted chatter, until you turn them back on.",
-    "The live comms trace running across the header on both sides of the session clock (callout 2) is who's talking right now: it traces the actual audio, lime on the left, orange to red on the right, and the pill in the status row under it names the speaker."
+    "The live comms trace across the header, either side of the session clock (callout 2), is who's talking right now: it traces the real audio, lime on the left, orange to red on the right, and the pill under it names the speaker.",
+    "Simon, Phoebe and Tim know the difference between car types. A GT3, a prototype and a touring car get different strategy and different advice.",
+    "Some calls come without asking. Mack spots cars alongside and hazards ahead. Simon calls flags and race control: when a black flag comes out he says why you got it (pit road speeding and by how much, jumping the start, passing under yellow, cutting the course, or the pit-exit blend line), how to serve it, and when it's cleared. If he can't tell the reason from the data, he says so. Whether it's a drive-through or a stop-and-go stays on your black box, iRacing doesn't share that."
    ],
    "shots": [
     {
@@ -110,7 +110,7 @@
    "steps": [
     "Header (callout 1): the current flag on both sides, the session clock and lap in the ring, and who's driving which car. The dot next to SDK tells you Team Radio is connected to iRacing. The TEAM SYNC light next to it is red when this race stays on your PC and glowing green when it's being shared with your RaceCamp team (sign in and pick a team under Settings, RaceCamp).",
     "Race control strip (callout 2): penalty status, whether you're on track or on pit road, and track condition (dry, damp, wet).",
-    "Tire Status (callout 3): live temperature and wear on all four tires, plus a glow around each one for how much of the car's weight it's carrying right now (estimated from the G-forces: blue means unloaded, orange to red means loaded). When the car is pulling close to the most grip it has shown this session, the two hardest-working tires flash red.",
+    "Tire Status (callout 3): live temperature and wear on all four tires, with a glow around each ring for how much of the car's weight that tire is carrying right now, blue when unloaded, orange when loaded. It's estimated from the G-forces, not a sensor. When the car is pulling close to the most grip it has held this session, the two hardest-working tires flash red.",
     "Relative (callout 4): just the cars close to you on track, a few ahead and a few behind. More useful than the full list when you're actually racing someone. The dropdown lets you show only your own class.",
     "Overall Standings (callout 5): every car in the race in running order, updating live. Your car is highlighted. Same class dropdown.",
     "Pace & Car Status (callout 6): your live delta, pace vs your optimal, lap consistency, required and optional repairs, and brake bias.",
@@ -132,7 +132,7 @@
       },
       {
        "region": "tire_status",
-       "text": "Tire temps and wear."
+       "text": "Tire temps, wear, and the load glow."
       },
       {
        "region": "relative",
@@ -184,6 +184,19 @@
      "image": "images/pit_stops-race.png"
     }
    ]
+  },
+  {
+   "id": "track_map",
+   "title": "Track Map: the live map",
+   "intro": "The Track Map tab draws every iRacing track and layout from iRacing's own official track maps: the real road shape, the correct direction of travel, start/finish, pit in and out, and iRacing's corner numbers and names. Every car on track is a dot in its class color with its class position.",
+   "steps": [
+    "Click TRACK MAP in the top nav any time, in or out of the car. The Overall Standings tower sits beside the map with its own class filter.",
+    "Your car is orange with a pink ring and a breathing halo. The leader of each class pulses in its class color. Dots glide between updates instead of hopping.",
+    "Corner numbers are iRacing's own, so the Turn 4 Tim and Simon talk about is the Turn 4 you see here.",
+    "Want it over the sim? Switch on the TRACK MAP overlay in the Overlays tab: same map, same dots, as a floating tile you can resize.",
+    "A handful of unusual layouts have no usable official map; those show an outline drawn from your first clean lap instead."
+   ],
+   "shots": []
   },
   {
    "id": "live_coaching",
@@ -289,14 +302,16 @@
   {
    "id": "overlays",
    "title": "Overlays: floating tiles over the sim",
-   "intro": "Overlays are small always-on-top tiles you can place over iRacing itself, for the people who race on one screen or want a couple of numbers in their eyeline. Each one is a piece of the wall: speed, fuel, fuel calculator, lap, delta, sectors, relative, standings, mini standings, team radio, strategy, performance, tire status, race info, weather, session timer, flag LED, team branding, radar, G-force, the track map, System (FPS; Sim CPU frame and Sim GPU frame, which are iRacing's own numbers for how much of each frame's time budget its CPU work and the GPU took, so over 100% means the sim is running slower than its frame target, not a broken PC; GPU temperature; your PC's CPU and RAM), Inputs (steering angle, throttle, brake and clutch, with a scrolling trace of the last eight seconds), and the Align Grid.",
+   "intro": "Overlays are small always-on-top tiles you place over iRacing itself, for anyone who races on one screen or wants a few numbers in their eyeline. Each one is a piece of the wall, and you pick exactly which ones you want.",
    "steps": [
     "The list (callout 1): switch each overlay on or off. Hover a name to see a preview of that tile (callout 2).",
-    "Launch Overlays and Close Overlays (callout 3) show or hide all the ones you've switched on. You can also give each a keyboard shortcut in Settings > Appearance, so they work while iRacing has focus.",
-    "Edit Layout lets you drag each tile where you want it on screen, and drag a tile's bottom-right corner to resize it - everything in the tile scales together. Positions and sizes are remembered.",
-    "Align Grid: with it switched on, a grid covers every monitor while Edit Layout is on, and a tile you drop snaps to the nearest grid line. Turn Edit Layout off and the grid goes away.",
-    "Tile color and how see-through the tiles are: Settings > Appearance.",
-    "Test Overlays pops the overlays up with demo data, so you can arrange them without being in a race."
+    "What's in the list: the single numbers (speed, fuel, fuel calculator, lap, delta, sectors), the wall panels (relative, standings, mini standings, team radio, strategy, performance, tire status, race info, weather, session timer, flag LED, team branding), the radar and G-force meter, the track map, and the Align Grid.",
+    "System: FPS, Sim CPU frame, Sim GPU frame, GPU temperature, and your PC's CPU and RAM. The two 'frame' tiles are iRacing's own numbers for how much of each frame's time budget its CPU work and the GPU took. They can read over 100%: that means the sim is running slower than its frame target, not a broken PC.",
+    "Inputs: steering angle, throttle, brake and clutch, with a scrolling trace of the last eight seconds.",
+    "Launch Overlays and Close Overlays (callout 3) show or hide everything you've switched on. Give them keyboard shortcuts under Settings > Appearance and they work while iRacing has focus.",
+    "Edit Layout: drag a tile where you want it, drag its bottom-right corner to resize it. Everything inside scales together, and positions are remembered.",
+    "Align Grid: with it switched on, a grid covers every monitor while Edit Layout is on, and a tile you drop snaps to the nearest line. Turn Edit Layout off and the grid disappears.",
+    "Test Overlays pops everything up with demo data so you can arrange it without being in a race. Tile color and how see-through the tiles are live under Settings > Appearance."
    ],
    "shots": [
     {
@@ -322,12 +337,12 @@
   {
    "id": "settings",
    "title": "Settings: making Team Radio your own",
-   "intro": "Click Settings at the top of the app any time. Four tabs.",
+   "intro": "Click Settings at the top of the app any time. Four tabs: General, Team Branding, Appearance, RaceCamp.",
    "steps": [
-    "General (first screenshot): one radio volume for all four crew members (callout 1), how fast they talk, audio output device and microphone (callout 2), spotter number callouts on or off, rain on the radio on or off, Rebind PTT (callout 3), Mute Startup Radio and Mute All Radio (callout 4), and metric or imperial display units (callout 5). Mute All is for a spectator who doesn't want to hear the radio; it clears itself the moment you get in the car.",
+    "General (first screenshot): one radio volume for all four crew members and how fast they talk (callout 1); audio output device and microphone (callout 2); spotter number callouts and rain on the radio, each on or off; Rebind PTT (callout 3); Mute Startup Radio and Mute All Radio (callout 4); metric or imperial display units (callout 5). Mute All is for a spectator who doesn't want to hear the radio, and it clears itself the moment you get in the car.",
     "Team Branding (second screenshot): upload your own team logo to replace the default RaceCamp one in the header, or reset to the default (callout 1). Save Branding applies it (callout 2).",
-    "Appearance (third screenshot): the app's own color, the lime in every title, edge and ring (callout 1, takes effect next time Team Radio starts), the color behind every overlay tile (callout 2), how solid the tiles are over the sim, and keyboard shortcuts for Launch Overlays and Close Overlays (callout 3) - click a box, press the combination you want, e.g. Ctrl+Alt+O.",
-    "RaceCamp (fourth screenshot): Sign In With RaceCamp (callout 1) opens racecamp.app in your browser. Once you're in, Team Radio uses your RaceCamp login for everything, and if you're on more than one team you pick the one you're racing with here (callout 2). The TEAM SYNC line under the team picker tells you whether this race is being shared with that team; the same light sits in the wall header on every tab."
+    "Appearance (third screenshot): the app's own color, the lime in every title, edge and ring (callout 1). It takes effect the next time Team Radio starts. Below it, the color behind every overlay tile (callout 2), how solid the tiles are over the sim, and keyboard shortcuts for Launch Overlays and Close Overlays (callout 3): click a box and press the combination you want, for example Ctrl+Alt+O.",
+    "RaceCamp (fourth screenshot): Sign In With RaceCamp (callout 1) opens racecamp.app in your browser. Once you're in, Team Radio uses your RaceCamp login for everything, and if you're on more than one team you pick the one you're racing with here (callout 2). The TEAM SYNC line under the team picker says whether this race is being shared with that team; the same light sits in the wall header on every tab."
    ],
    "shots": [
     {
@@ -451,20 +466,8 @@
      "image": "images/bugs-dialog_bug_report.png"
     }
    ]
-  },
-  {
-   "id": "track_map",
-   "title": "Track Map",
-   "intro": "The Track Map tab is back, and it's built on iRacing's own official track maps: the real layout of every track, the right direction of travel, start/finish, pit in and out, and iRacing's corner numbers and names. Every car on track is a dot in its class color with its class position; your car is highlighted.",
-   "steps": [
-    "Click TRACK MAP in the top nav any time, in or out of the car.",
-    "Corner numbers are iRacing's own, so what Tim and Simon call Turn 4 is the Turn 4 you see here.",
-    "The Overall Standings tower sits beside the map with its own class filter.",
-    "Want it over the sim? Switch on the TRACK MAP overlay in the Overlays tab - same map, same dots, as a floating tile you can resize."
-   ],
-   "shots": []
   }
  ],
- "published_at": "2026-09-25T23:26:35+00:00",
+ "published_at": "2026-09-26T00:47:15+00:00",
  "app_version": "0.9.24"
 }
